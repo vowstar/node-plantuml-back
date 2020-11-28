@@ -4,7 +4,7 @@ Folk from [markushedvall's node-plantuml](https://github.com/markushedvall/node-
 
 A Node.js module and CLI for running [PlantUML](http://plantuml.sourceforge.net/).
 
-[![npm Version](https://img.shields.io/npm/v/node-plantuml-back.svg)](https://www.npmjs.com/package/node-plantuml-back) [![Build Status](https://travis-ci.org/vowstar/node-plantuml-back.svg)](https://travis-ci.org/vowstar/node-plantuml-back) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![npm Version](https://img.shields.io/npm/v/node-plantuml-back.svg)](https://www.npmjs.com/package/node-plantuml-back) [![Build Status](https://travis-ci.org/vowstar/node-plantuml.svg)](https://travis-ci.org/vowstar/node-plantuml) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 [PlantUML](http://plantuml.sourceforge.net/) is a popular diagramming tool that uses simple textual descriptions to draw UML diagrams. With the API provided by this module you can easily generate PlantUML diagrams directly from your Node.js application. It can also be used to encode and decode PlantUML source files.
 
