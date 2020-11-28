@@ -24,12 +24,11 @@ if (!fs.existsSync(PLANTUML_JAR_VER_FILE) || !fs.existsSync(PLANTUML_JAR)) {
   console.log('Downloading plantuml.jar version ' + plantumlVersion)
   download(PLANTUML_FILES_URL + PLANTUML_FILES_JAR_PATH, PLANTUML_JAR, true)
   try {
-    var time = new Date();
-    fs.utimesSync(PLANTUML_JAR_VER_FILE, time, time);
+    var time = new Date()
+    fs.utimesSync(PLANTUML_JAR_VER_FILE, time, time)
   } catch (err) {
-    fs.closeSync(fs.openSync(PLANTUML_JAR_VER_FILE, 'w'));
+    fs.closeSync(fs.openSync(PLANTUML_JAR_VER_FILE, 'w'))
   }
 } else {
-  console.log('plantuml.jar version ' + plantumlVersion + ' already exist, if you want update please delete it.');
+  console.log('plantuml.jar version ' + plantumlVersion + ' already exist, if you want update please delete it.')
 }
-
