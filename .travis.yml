@@ -11,3 +11,4 @@ deploy:
   on:
     tags: true
     repo: vowstar/node-plantuml
+  skip_cleanup: true
