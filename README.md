@@ -1,8 +1,10 @@
-# node-plantuml
+# node-plantuml-back
+
+Folk from [markushedvall's node-plantuml](https://github.com/markushedvall/node-plantuml)
 
 A Node.js module and CLI for running [PlantUML](http://plantuml.sourceforge.net/).
 
-[![npm Version](https://img.shields.io/npm/v/node-plantuml.svg)](https://www.npmjs.com/package/node-plantuml) [![Build Status](https://travis-ci.org/markushedvall/node-plantuml.svg)](https://travis-ci.org/markushedvall/node-plantuml) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![npm Version](https://img.shields.io/npm/v/node-plantuml-back.svg)](https://www.npmjs.com/package/node-plantuml-back) [![Build Status](https://travis-ci.org/vowstar/node-plantuml-back.svg)](https://travis-ci.org/vowstar/node-plantuml-back) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 [PlantUML](http://plantuml.sourceforge.net/) is a popular diagramming tool that uses simple textual descriptions to draw UML diagrams. With the API provided by this module you can easily generate PlantUML diagrams directly from your Node.js application. It can also be used to encode and decode PlantUML source files.
 
@@ -13,13 +15,13 @@ Install [Graphviz](http://www.graphviz.org/) to be able to generate all diagram 
 ## Install
 
 ```shell
-npm install node-plantuml
+npm install node-plantuml-back
 ```
 
-If you want to use the CLI node-plantuml can be install it globally:
+If you want to use the CLI node-plantuml-back can be install it globally:
 
 ```shell
-npm install node-plantuml -g
+npm install node-plantuml-back -g
 ```
 
 ## Example
@@ -27,7 +29,7 @@ npm install node-plantuml -g
 Diagrams can be created from source files.
 
 ```javascript
-var plantuml = require('node-plantuml');
+var plantuml = require('node-plantuml-back');
 var fs = require('fs');
 
 var gen = plantuml.generate("input-file");
@@ -40,7 +42,7 @@ Following is an example of a simple web server for generating images from encode
 
 ```javascript
 var express = require('express');
-var plantuml = require('node-plantuml');
+var plantuml = require('node-plantuml-back');
 
 var app = express();
 
@@ -71,7 +73,7 @@ app.listen(8080);
 
 ## CLI
 
-The node-plantuml CLI can be accessed with the puml command.
+The node-plantuml-back CLI can be accessed with the puml command.
 
 ```shell
 puml generate file.puml -o file.png
