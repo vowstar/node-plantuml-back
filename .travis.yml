@@ -3,3 +3,11 @@ node_js:
   - "10"
   - "12"
   - "lts/*"
+deploy:
+  provider: npm
+  email: vowstar@gmail.com
+  api_key:
+    secure: "DTyyHJZ13d7pujgDIUhHr+YHE/CXfHCKFll0tzZP9IqRN7sBIWX3+GPNaYjJF1CgxrN6j27lJgvrNVLW4MGRIls726xS88VwJiYOgnWIlXnIfELUgU8l/Kstl8hWhWApVudG1fEjqNvyiT8Kfzt4/S6A4O/Us/U6dnf+pX3mtrwH45UJ9ThU5bTjgNo6Bd/k4e32uRHozITbcIVcf05ZAdtsP42N2CNaF8KBPEDezuuCEJXZc+BPplTrDiJqXavHwJJBXqnbEkGwmH0b0OF8emS+s4YM+FrSYeljKIlFj53ONYBkM7KHnJi7rL6wjOxehgbFml+aabwys+2DuyquvkzWuoqyGywd/ZA6PMzwbt2b8yuD/cdV+qMkUvr1Yt4iKpNWmTJRKK1WS/XbQML2x3ad0IeHQ8r8qfr/Zl5AOmNnC+j8BN814oDif9frb3A+R3m4IEomfzieSwzsKBswjHAz1afmehZgxsInqi5H6HCJNoq85NBuIUxCALdDB5XFzHT9W9nzI+/4DPwp4bxw1mKs12HPoLIvhlZ38X4ftG+uDQef990zpTsMvxLsYl4827oaF7/ac5Jq74oOJQHIjn10ggRRFxrW/ouDcx22DV4HPrgvZtmnzfUgZsAGCJAP8wEl1p2nJQsm/ntxsOljeyodfbDT+rk/eR4GU+7SYbc="
+  on:
+    tags: true
+    repo: vowstar/node-plantuml
