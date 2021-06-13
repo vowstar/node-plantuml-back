@@ -1,6 +1,6 @@
 {
   "name": "node-plantuml-back",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "plantumlVersion": "1.2021.7",
   "description": "A Node.js module and CLI for running PlantUML",
   "main": "index.js",

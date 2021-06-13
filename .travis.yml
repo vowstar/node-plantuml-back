@@ -11,4 +11,5 @@ deploy:
   on:
     tags: true
     repo: vowstar/node-plantuml-back
+    node: lts/*
   skip_cleanup: true
