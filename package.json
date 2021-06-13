@@ -1,6 +1,6 @@
 {
   "name": "node-plantuml-back",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "plantumlVersion": "1.2021.7",
   "description": "A Node.js module and CLI for running PlantUML",
   "main": "index.js",
@@ -31,6 +31,7 @@
     "index.js",
     "lib/",
     "vendor/plantuml.jar",
+    "vendor/*",
     "resources/",
     "nail/plantumlnail.jar",
     "scripts/download.js",
@@ -40,6 +41,7 @@
   "scripts": {
     "getpuml": "node scripts/get-plantuml-jar.js",
     "prepare": "npm run getpuml",
+    "prepublish": "npm run getpuml",
     "postinstall": "npm run getpuml && node scripts/get-vizjs.js",
     "test": "standard && node test/fixtures/prepare.js && mocha",
     "build": "node nail/build.js"
