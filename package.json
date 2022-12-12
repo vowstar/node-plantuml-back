@@ -1,7 +1,7 @@
 {
   "name": "node-plantuml-back",
-  "version": "1.1.0",
-  "plantumlVersion": "1.2021.9",
+  "version": "1.1.1",
+  "plantumlVersion": "1.2022.14",
   "description": "A Node.js module and CLI for running PlantUML",
   "main": "index.js",
   "author": "Markus Hedvall <mackanhedvall@gmail.com>",
@@ -16,16 +16,18 @@
     "diagram"
   ],
   "dependencies": {
-    "commander": "^2.8.1",
-    "node-nailgun-client": "^0.1.0",
-    "node-nailgun-server": "^0.1.4",
-    "plantuml-encoder": "^1.2.5"
+    "commander": "^9.4.1",
+    "node-nailgun-client": "^0.1.2",
+    "node-nailgun-server": "^0.3.0",
+    "plantuml-encoder": "^1.4.0"
   },
   "devDependencies": {
     "chai": "^4.x",
-    "mocha": "^5.x",
+    "coveralls": "^3.x",
+    "mocha": "^10.x",
+    "nyc": "^15.x",
     "shelljs": "^0.8.x",
-    "standard": "^12.x"
+    "standard": "^17.x"
   },
   "files": [
     "index.js",
@@ -43,8 +45,9 @@
     "prepare": "npm run getpuml",
     "prepublish": "npm run getpuml",
     "postinstall": "npm run getpuml && node scripts/get-vizjs.js",
-    "test": "standard && node test/fixtures/prepare.js && mocha",
-    "build": "node nail/build.js"
+    "test": "standard && node test/fixtures/prepare.js && nyc --reporter=lcov mocha --reporter spec --timeout 200000",
+    "build": "node nail/build.js",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "bin": {
     "puml": "index.js"

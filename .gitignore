@@ -1,6 +1,8 @@
 .DS_Store
-npm-debug.log
+.nyc_output/
+.tester.log
+coverage/
 node_modules/
-vendor/
-
+npm-debug.log
 test/fixtures/*.png
+vendor/
