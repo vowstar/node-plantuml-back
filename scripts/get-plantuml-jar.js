@@ -13,8 +13,8 @@ const JAR_DIR_PATH = path.join(__dirname, '../vendor')
 const PLANTUML_JAR = path.join(JAR_DIR_PATH, 'plantuml.jar')
 const PLANTUML_JAR_VER_FILE = path.join(JAR_DIR_PATH, plantumlVersion)
 
-const PLANTUML_FILES_URL = 'https://sourceforge.net/projects/plantuml/files/'
-const PLANTUML_FILES_JAR_PATH = plantumlVersion + '/plantuml.' + plantumlVersion + '.jar'
+const PLANTUML_FILES_URL = 'https://github.com/plantuml/plantuml/releases/download/'
+const PLANTUML_FILES_JAR_PATH = 'v' + plantumlVersion + '/plantuml-' + plantumlVersion + '.jar'
 
 if (!fs.existsSync(JAR_DIR_PATH)) {
   fs.mkdirSync(JAR_DIR_PATH)
