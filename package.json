@@ -16,7 +16,7 @@
     "diagram"
   ],
   "dependencies": {
-    "commander": "^11.x",
+    "commander": "^12.x",
     "node-nailgun-client": "^0.1.2",
     "node-nailgun-server": "^0.3.0",
     "plantuml-encoder": "^1.4.0"
