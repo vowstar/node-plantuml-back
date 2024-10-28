@@ -1,7 +1,7 @@
 {
   "name": "node-plantuml-back",
-  "version": "1.1.3",
-  "plantumlVersion": "1.2023.11",
+  "version": "1.1.4",
+  "plantumlVersion": "1.2024.7",
   "description": "A Node.js module and CLI for running PlantUML",
   "main": "index.js",
   "author": "Markus Hedvall <mackanhedvall@gmail.com>",
@@ -16,23 +16,23 @@
     "diagram"
   ],
   "dependencies": {
-    "commander": "^11.0.0",
+    "commander": "^11.x",
     "node-nailgun-client": "^0.1.2",
     "node-nailgun-server": "^0.3.0",
     "plantuml-encoder": "^1.4.0"
   },
   "devDependencies": {
     "chai": "^4.x",
-    "coveralls": "^3.x",
+    "codecov": "^3.x",
     "mocha": "^10.x",
-    "nyc": "^15.x",
+    "nyc": "^17.x",
     "shelljs": "^0.8.x",
     "standard": "^17.x"
   },
   "files": [
     "index.js",
     "lib/",
-    "vendor/plantuml.jar",
+    "vendor/*.jar",
     "vendor/*",
     "resources/",
     "nail/plantumlnail.jar",
@@ -41,13 +41,12 @@
     "scripts/get-vizjs.js"
   ],
   "scripts": {
-    "getpuml": "node scripts/get-plantuml-jar.js",
-    "prepare": "npm run getpuml",
-    "prepublish": "npm run getpuml",
-    "postinstall": "npm run getpuml && node scripts/get-vizjs.js",
+    "vizjs": "node scripts/get-vizjs.js && node scripts/get-j2v8linux.js && node scripts/get-j2v8mac.js && node scripts/get-j2v8win.js",
+    "prepare": "node scripts/get-plantuml-jar.js",
+    "prepublish": "node scripts/get-plantuml-jar.js",
     "test": "standard && node test/fixtures/prepare.js && nyc --reporter=lcov mocha --reporter spec --timeout 200000",
     "build": "node nail/build.js",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | codecov"
   },
   "bin": {
     "puml": "index.js"
