@@ -24,7 +24,7 @@
   "devDependencies": {
     "chai": "^4.x",
     "codecov": "^3.x",
-    "mocha": "^10.x",
+    "mocha": "^11.x",
     "nyc": "^17.x",
     "shelljs": "^0.8.x",
     "standard": "^17.x"
